@@ -1,4 +1,4 @@
-# [Double](https://withdouble.com) · Freont End engineering challenge
+# [Double](https://withdouble.com) · Front End engineering challenge
 
 :wave: If you're looking for an adventure, [look no further](https://withdouble.com/jobs).
 
