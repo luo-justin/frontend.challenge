@@ -25,7 +25,7 @@
 
 - Fork this repository
 - Open a PR on your fork (please do not open a PR on this repo or from your repo to this repo, we don't want other candidates to see your awesome solutions)
-- Share your forked repo with [@pierre-elie](https://github.com/pierre-elie), [@augustinr](https://github.com/augustinr) and [@flobories](https://github.com/flobories)
+- Share your forked repo with [@pierre-elie](https://github.com/pierre-elie), [@augustinr](https://github.com/augustinr), [@dkt2](https://github.com/dkt2) and [@flobories](https://github.com/flobories)
 
 We will review your code within 3 days and will be in touch via email
 
