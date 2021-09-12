@@ -11,15 +11,15 @@ const REAL_TIME_UPDATES_INTERVAL = 10000
 const Application = (): ReactElement => {
   const [account, refreshAccount] = useAccount()
 
-  const refreshAccontAttempt = async () => {
+  const refreshAccountAttempt = async () => {
     try {
       await refreshAccount()
     } catch (e) {
-      // alert('Error refreshing account.')
+      alert('Error refreshing account.')
     }
   }
 
-  useEffect(() => runEvery(REAL_TIME_UPDATES_INTERVAL, refreshAccontAttempt))
+  useEffect(() => runEvery(REAL_TIME_UPDATES_INTERVAL, refreshAccountAttempt))
 
   return (
     <AccountContext.Provider value={account}>
