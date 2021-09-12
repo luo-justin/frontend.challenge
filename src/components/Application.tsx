@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 
 import runEvery from 'lib/runEvery'
 import useAccount from 'lib/useAccount'
@@ -11,10 +11,15 @@ const REAL_TIME_UPDATES_INTERVAL = 10000
 const Application = (): ReactElement => {
   const [account, refreshAccount] = useAccount()
 
-  useEffect(
-    () => runEvery(REAL_TIME_UPDATES_INTERVAL, refreshAccount),
-    [refreshAccount],
-  )
+  const refreshAccountAttempt = async () => {
+    try {
+      await refreshAccount()
+    } catch (e) {
+      alert('Error refreshing account.')
+    }
+  }
+
+  useEffect(() => runEvery(REAL_TIME_UPDATES_INTERVAL, refreshAccountAttempt))
 
   return (
     <AccountContext.Provider value={account}>
