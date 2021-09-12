@@ -109,12 +109,16 @@ const Agenda = (): ReactElement => {
     for (const dept in deptObj) {
       if (dept === 'Default') {
         deptsArray.push(
-          <DeptGroup events={noDepartmentArray} dept={'No Department'} />,
+          <DeptGroup
+            events={noDepartmentArray}
+            dept={'No Department'}
+            key={dept}
+          />,
         )
         continue
       }
       const deptEvents = events.filter((item) => item.event.department === dept)
-      deptsArray.push(<DeptGroup events={deptEvents} dept={dept} />)
+      deptsArray.push(<DeptGroup events={deptEvents} dept={dept} key={dept} />)
     }
 
     return deptsArray

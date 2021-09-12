@@ -16,12 +16,12 @@ type departmentEventObj = {
 
 const DeptGroup = ({ events, dept }: departmentEventObj) => {
   return (
-    <div className={style.deptCard}>
-      <div>
+    <div>
+      <div className={style.deptCard}>
         <h4 className={style.deptHeader}>{dept}</h4>
         <hr className={style.divider} />
         <List>
-          {events.map(( ({ calendar, event }) => (
+          {events.map(({ calendar, event }) => (
             <EventCell key={event.id} calendar={calendar} event={event} />
           ))}
         </List>
